@@ -1,17 +1,17 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const AddJobPage = ({ addJobSubmit }) => {
-  const [title, setTitle] = useState("");
-  const [type, setType] = useState("Full-Time");
-  const [location, setLocation] = useState("");
-  const [description, setDescription] = useState("");
-  const [salary, setSalary] = useState("Under $50K");
-  const [companyName, setCompanyName] = useState("");
-  const [companyDescription, setCompanyDescription] = useState("");
-  const [contactPhone, setContactPhone] = useState("");
-  const [contactEmail, setContactEmail] = useState("");
+  const [title, setTitle] = useState('');
+  const [type, setType] = useState('Full-Time');
+  const [location, setLocation] = useState('');
+  const [description, setDescription] = useState('');
+  const [salary, setSalary] = useState('Under $50K');
+  const [companyName, setCompanyName] = useState('');
+  const [companyDescription, setCompanyDescription] = useState('');
+  const [contactPhone, setContactPhone] = useState('');
+  const [contactEmail, setContactEmail] = useState('');
 
   const navigate = useNavigate();
 
@@ -31,8 +31,8 @@ const AddJobPage = ({ addJobSubmit }) => {
       },
     };
     addJobSubmit(newJob);
-    toast.success("Job added successfully");
-    navigate("/jobs");
+    toast.success('Job added successfully');
+    navigate('/jobs');
   };
 
   return (
@@ -73,7 +73,7 @@ const AddJobPage = ({ addJobSubmit }) => {
                 id="title"
                 name="title"
                 className="border rounded w-full py-2 px-3 mb-2"
-                placeholder="eg. Beautiful Apartment In Miami"
+                placeholder="e.g. Senior React Engineer"
                 required
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -91,7 +91,7 @@ const AddJobPage = ({ addJobSubmit }) => {
                 name="description"
                 className="border rounded w-full py-2 px-3"
                 rows="4"
-                placeholder="Add any job duties, expectations, requirements, etc"
+                placeholder="Add any job duties, expectations, requirements, etc."
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               ></textarea>

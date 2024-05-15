@@ -1,6 +1,6 @@
-import { useParams, useLoaderData, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { toast } from "react-toastify";
+import { useParams, useLoaderData, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const EditJobPage = ({ updateJobSubmit }) => {
   const job = useLoaderData();
@@ -37,7 +37,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
       },
     };
     updateJobSubmit(updatedJob);
-    toast.success("Job updated successfully");
+    toast.success('Job updated successfully');
     navigate(`/job/${job.id}`);
   };
 
@@ -81,7 +81,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
                 id="title"
                 name="title"
                 className="border rounded w-full py-2 px-3 mb-2"
-                placeholder="eg. Beautiful Apartment In Miami"
+                placeholder="e.g. Senior React Engineer"
                 required
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -99,7 +99,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
                 name="description"
                 className="border rounded w-full py-2 px-3"
                 rows="4"
-                placeholder="Add any job duties, expectations, requirements, etc"
+                placeholder="Add any job duties, expectations, requirements, etc."
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               ></textarea>
