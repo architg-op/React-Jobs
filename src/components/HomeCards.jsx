@@ -1,5 +1,5 @@
-import Card from "./Card";
-import { Link } from "react-router-dom";
+import Card from './Card';
+import { Link } from 'react-router-dom';
 
 const HomeCards = () => {
   return (
@@ -12,7 +12,7 @@ const HomeCards = () => {
               Browse our React jobs and start your career today
             </p>
             <Link
-              to="/jobs"
+              to="/React-Jobs/jobs"
               className="inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-700"
             >
               Browse Jobs
@@ -24,7 +24,7 @@ const HomeCards = () => {
               List your job to find the perfect developer for the role
             </p>
             <Link
-              to="/add-job"
+              to="/React-Jobs/add-job"
               className="inline-block bg-indigo-500 text-white rounded-lg px-4 py-2 hover:bg-indigo-600"
             >
               Add Job
